@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1>Dead Simple Widget Creationg</h1>
+      <select kendo-drop-down-list>
+        <option value="1">Thing 1</option>
+        <option value="2">Thing 2</option>
+        <option value="3">Thing 3</option>
+      </select>
+    </div>
+
+    <div class="span12">
+      <h1>Configuring Widget Options (k- Attributes)</h1>
+      <select kendo-drop-down-list
+              k-option-label="'Select A Thing'"
+              k-data-text-field="'name'"
+              k-data-value-field="'id'"
+              k-data-source="things">
+      </select>
+    </div>
+
+    <div class="span12">
+      <h1>Configuring Widget Options From The Controller</h1>
+      <select kendo-drop-down-list
+              k-options="thingsOptions">
+      </select>
+    </div>
+
+    <div class="span12">
+      <h1>Binding To Events</h1>
+      <select kendo-drop-down-list
+              k-options="thingsOptions"
+              k-on-change="thingsChange(kendoEvent)">
+      </select>
+    </div>
+
+    <div class="span12">
+      <h1>Integration With Angular Models</h1>
+      <select kendo-drop-down-list
+              k-options="thingsOptions"
+              ng-model="selectedThing">
+      </select>
+      <p>
+        You selected: {{selectedThing}}
+      </p>
+    </div>
+
+    <div class="span12">
+      <h1>Assigning Widget References</h1>
+      <button class="k-button" ng-click="openModal()">Open Modal</button>
+      <div kendo-window="modal" k-title="'Sample Window'" k-visible="false" k-modal="true">
+        hello world
+      </div>
+    </div>
+  </div>
+</div>

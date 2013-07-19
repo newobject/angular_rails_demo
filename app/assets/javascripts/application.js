@@ -10,7 +10,13 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require jquery/jquery-2.0.3
+//= require angular/angular-1.0.7
+//= require kendo/kendo.web-2013.1.319
+//= require kendo/angular-kendo-0.5.1
+//= require main
+//= require_tree ./services
+//= require_tree ./filters
+//= require_tree ./directives
+//= require_tree ./ctrls
+//= require routes

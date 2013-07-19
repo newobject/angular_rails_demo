@@ -34,6 +34,8 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'pry-nav'
 end
 
 # Use ActiveModel has_secure_password
